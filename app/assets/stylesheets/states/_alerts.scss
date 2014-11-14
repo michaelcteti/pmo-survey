@@ -1,0 +1,27 @@
+.alert-success {
+  @include alert;
+  background: $lightest-green;
+  border: 1px solid $lighter-green;
+  color: $darker-green;
+}
+
+.alert-caution {
+  @include alert;
+  background: $lightest-teal;
+  border: 1px solid $lighter-teal;
+  color: $dark-teal;
+}
+
+.alert-warning {
+  @include alert;
+  background: $lightest-yellow;
+  border: 1px solid $light-yellow;
+  color: $darkest-yellow;
+}
+
+.alert-error {
+  @include alert;
+  background: $lightest-red;
+  border: 1px solid $lighter-red;
+  color: $dark-red;
+}

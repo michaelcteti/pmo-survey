@@ -1,0 +1,11 @@
+#= depend_on_asset 'test.html'
+
+app.config ($routeProvider, $locationProvider) ->
+  # Use History API to push new URLs
+  $locationProvider.html5Mode true
+
+  $routeProvider
+    .when('/tests',
+      controller: 'TestController'
+      templateUrl: '<%= asset_path("test.html") %>'
+    )

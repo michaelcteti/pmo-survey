@@ -1,0 +1,47 @@
+#header {
+  height: 8.1rem;
+  @include title-font;
+  margin-bottom: 5rem;
+
+  // Fallback
+  background-color: $header-color;
+  background-repeat: repeat-x;
+
+  // Safari 4-5, Chrome 1-9
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from($darkest-teal-hover), to($darkest-teal));
+
+  // Safari 5.1, Chrome 10+
+  background: -webkit-linear-gradient(top, $darkest-teal-hover, $darkest-teal);
+
+  // Firefox 3.6+
+  background: -moz-linear-gradient(top, $darkest-teal-hover, $darkest-teal);
+
+  // IE 10
+  background: -ms-linear-gradient(top, $darkest-teal-hover, $darkest-teal);
+
+  // Opera 11.10+
+  background: -o-linear-gradient(top, $darkest-teal-hover, $darkest-teal);
+
+  li.col {
+    border-bottom: .5rem solid transparent;
+    color: $light-gray;
+    height: 100%;
+    padding: 4.3rem 2rem 1rem 2rem;
+    @include vendor-prefix('transition', 'all 0.2s ease');
+
+    &:hover {
+      color: white;
+    }
+
+    &.header-selected {
+      background: $header-color-hover;
+      border-bottom: .5rem solid $secondary-color;
+      color: white;
+    }
+  }
+}
+
+#logo {
+  margin-top: 3rem;
+  width: 25%;
+}

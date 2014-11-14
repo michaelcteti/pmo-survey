@@ -1,0 +1,130 @@
+html {
+  font-size: 62.5%;
+  height: 100%;
+}
+
+body {
+  background: $background-color;
+  color: $base-text-color;
+  counter-reset: count;
+  @include base-font;
+  height: 100%;
+  min-height: 100%;
+  overflow: scroll;
+}
+
+.container {
+  margin: 0 auto;
+  width: 1000px;
+}
+
+section {
+  background: white;
+  box-shadow: 0 4px 8px $light-gray;
+  clear: both;
+  margin: 0 0 2rem 0;
+  padding: 2rem;
+
+  &.goal-details {
+    margin-bottom: 0;
+  }
+
+  &.measure-details {
+    div.row:not(:last-child) {
+      border-bottom: $base-border-style;
+      margin-bottom: 1rem;
+      padding-bottom: 1rem;
+    }
+  }
+}
+
+section.section-footer {
+  border-top: 1px solid #e3e6e6;
+  margin-top: -2rem;
+}
+
+#content {
+  margin-bottom: -20rem;
+  min-height: 100%;
+  position: relative;
+
+  &:after {
+    content: "";
+    display: block;
+  }
+}
+
+.footer, #content:after {
+  // .push must be the same height as footer
+  height: 20rem;
+}
+
+#content > section {
+  box-shadow: 0 4px 8px $light-gray;
+}
+
+h1 {
+  @include title-font;
+}
+
+h2 {
+  @include fontsize(14);
+  line-height: 1.8rem;
+  margin: .5rem 0;
+}
+
+.title {
+  font-family: 'Source Sans Pro', Arial, sans-serif;
+  @include fontsize(30);
+  font-weight: 300;
+  line-height: 1.8;
+}
+
+p {
+  color: $body-copy-color;
+  @include fontsize(14);
+  font-weight: 300;
+  line-height: 1.8;
+}
+
+a {
+  color: $active-color;
+  text-decoration: none;
+  @include vendor-prefix('transition', 'text-decoration 0.2s ease');
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.label {
+  color: $base-text-color;
+  font-weight: bold;
+}
+
+b {
+  font-weight: bold;
+}
+
+.page-header {
+  border-top: 0.5rem solid #dee8eb;
+  padding: 2rem 0 0;
+  text-align: center;
+}
+
+.section-header {
+  background-color: $section-header-color;
+  box-shadow: 0 4px 8px 1px $light-gray;
+  clear: both;
+  color: white;
+  padding: 1rem 2rem;
+}
+
+footer {
+  background: $footer-color;
+  color: $light-gray;
+  height: 20rem;
+  margin-top: 2rem;
+  padding: 5rem 0;
+  position: relative;
+}

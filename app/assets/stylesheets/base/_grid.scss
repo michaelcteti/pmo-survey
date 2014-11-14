@@ -1,0 +1,81 @@
+@mixin grid-padding-and-margin {
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.row {
+  clear: both;
+  width: 100%;
+
+  &:after {
+    clear: both;
+    content: '';
+    display: table;
+  }
+}
+
+.col {
+  float: left;
+}
+
+.one-of-twelve {
+  @include grid-padding-and-margin;
+  width: 8.33%;
+}
+
+.one-of-six, .two-of-twelve {
+  @include grid-padding-and-margin;
+  width: 16.66%;
+}
+
+.one-of-four, .three-of-twelve {
+  @include grid-padding-and-margin;
+  width: 25%;
+}
+
+.one-of-three, .four-of-twelve {
+  @include grid-padding-and-margin;
+  width: 33.33%
+}
+
+.five-of-twelve {
+  @include grid-padding-and-margin;
+  width: 41.66%;
+}
+
+.one-of-two, .six-of-twelve {
+  @include grid-padding-and-margin;
+  width: 50%;
+}
+
+.seven-of-twelve {
+  @include grid-padding-and-margin;
+  width: 58.33%
+}
+
+.two-of-three, .eight-of-twelve {
+  @include grid-padding-and-margin;
+  width: 66.66%;
+}
+
+.three-of-four, .nine-of-twelve {
+  @include grid-padding-and-margin;
+  width: 75%;
+}
+
+.five-of-six, .ten-of-twelve {
+  @include grid-padding-and-margin;
+  width: 83.33%;
+}
+
+.eleven-of-twelve {
+  @include grid-padding-and-margin;
+  width: 91.66%;
+}
+
+.one-of-one {
+  @include grid-padding-and-margin;
+  width: 100%
+}

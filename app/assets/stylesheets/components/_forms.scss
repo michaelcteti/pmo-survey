@@ -1,0 +1,67 @@
+.emphasized-title {
+  font-family: 'Maven Pro', Arial, sans-serif;
+  color: #31849a;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.form-primary {
+  color: $base-text-color;
+}
+
+.form-secondary {
+  color: white;
+}
+
+.form-submit-buttons {
+  a {
+    vertical-align: middle;
+  }
+
+  input[type="submit"] {
+    margin-right: 1rem;
+    padding: 1.4rem;
+    width: auto;
+  }
+}
+
+.form-chosen-select {
+  .chosen-container {
+    margin-left: -10px;
+    margin-right: 1rem;
+    width: 275px;
+  }
+}
+
+.helper-text {
+  font-style: italic;
+}
+
+.form-stacked-group {
+  label {
+    display: block;
+  }
+}
+
+.characters-remaining {
+  padding-right: 1px
+}
+.limit-no-show {
+  color: transparent;
+}
+
+.limit-warning-mild {
+  color: gray;
+}
+
+.limit-warning-medium {
+  color: darkred;
+}
+
+.limit-warning-hot{
+  color: red;
+}
+
+.with-characters-remaining {
+  margin-bottom: 0;
+}

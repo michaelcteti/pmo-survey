@@ -1,0 +1,19 @@
+.progress-bar {
+  position: relative;
+  .task-active { fill: $task-active-color; }
+  .task-cancelled { fill: $gray; }
+  .task-completed { fill: $task-completed-color; }
+  .task-not-started { fill: $task-not-started-color; }
+  .task-overdue { fill: $task-overdue-color; }
+  .task-stopped { fill: $task-stopped-color; }
+  .tooltip {
+    width: 120px;
+    text-align: center;
+    .header {
+      padding: 2px 24px;
+    }
+    .body {
+      @include fontsize(24);
+    }
+  }
+}

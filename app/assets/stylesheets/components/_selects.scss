@@ -1,0 +1,184 @@
+select {
+  border-radius: .2rem;
+  height: 30px;
+  outline: none;
+  padding: 0.5rem 3.25rem 0.5rem 1rem;
+  -webkit-appearance:none;
+}
+
+.select-primary {
+  border: $base-border-style;
+
+  &:focus {
+    border: $focus-border-style;
+  }
+}
+
+.select-secondary {
+  background: $section-header-dark-color;
+  border: $secondary-border-style;
+  color: white;
+
+  &:focus {
+    border: .1rem solid $dark-blue;
+  }
+}
+
+label.select-label {
+  margin-right: 3rem;
+  position: relative;
+
+  &:after {
+    content: '\e813';
+    font-family: 'Fontello';
+    right: 4%;
+    padding: 0 0 .2rem;
+    position:absolute;
+    pointer-events:none;
+    top: -0.2rem;
+    width: 0;
+  }
+}
+
+.chosen-select {
+  width: 300px;
+}
+
+.container .chosen-container-multi .chosen-choices li.search-field input[type="text"] {
+  height: inherit;
+}
+
+// Override chosen defaults on all selects
+select+.chosen-container .chosen-single {
+  border-radius: .2rem;
+  box-shadow: none;
+  height: 30px;
+  line-height: 28px;
+  margin: 0 1rem;
+  padding-right: 2em;
+
+  span {
+    margin-right: 0;
+  }
+}
+
+select+.chosen-container-single .chosen-drop {
+  border: none;
+  border-radius: 0.2rem;
+  margin: 0 1rem;
+}
+
+select.no-margin {
+  + .chosen-container .chosen-single,
+  + .chosen-container-single .chosen-drop {
+    margin: 0;
+  }
+}
+
+// Override chosen defaults on primary button styles
+.select-primary + .chosen-container .chosen-single {
+  background: white;
+  border: $base-border-style;
+  color: $base-text-color;
+  width: 100%;
+}
+
+.select-primary + .chosen-container-single .chosen-drop {
+  color: $base-text-color;
+
+  .chosen-results {
+    margin-top: 1rem;
+  }
+
+  .active-result:hover {
+    background: $light-gray;
+  }
+
+  .result-selected {
+    background: $lightest-gray;
+    color: $base-text-color;
+
+    &:hover {
+      color: white;
+    }
+  }
+}
+
+.select-primary + .chosen-container-single .chosen-single div b {
+  display: none;
+}
+
+// Override chosen defaults on secondary button styles
+.select-secondary + .chosen-container .chosen-single {
+  background: $section-header-dark-color;
+  border: $secondary-border-style;
+  box-shadow: none;
+  color: white;
+  width: 100%;
+}
+
+select-secondary + .chosen-container-single .chosen-drop {
+  color: $base-text-color;
+
+  .chosen-results {
+    margin-top: 1rem;
+  }
+
+  .active-result:hover {
+    background: $light-gray;
+  }
+
+  .result-selected {
+    background: $lightest-gray;
+    color: $base-text-color;
+
+    &:hover {
+      color: white;
+    }
+  }
+}
+
+.select-secondary + .chosen-container-single .chosen-single div b {
+  display: none;
+}
+
+// Override chosen defaults for searchable selects
+.select-searchable + .chosen-container .chosen-single {
+  background: $section-header-dark-color;
+  border: $secondary-border-style;
+  color: white;
+}
+
+.select-searchable + .chosen-container-single .chosen-drop {
+  color: $base-text-color;
+  top: 0;
+  width: 300px;
+
+  .active-result:hover {
+    background: $light-gray;
+  }
+
+  .result-selected {
+    background: $lightest-gray;
+    color: $base-text-color;
+
+    &:hover {
+      color: white;
+    }
+  }
+}
+
+.select-searchable + .chosen-container-single .chosen-single div b {
+  display: none;
+}
+
+.select-searchable + .chosen-container-single .chosen-drop .chosen-search {
+  position: relative;
+  z-index: 1010;
+}
+
+.select-searchable + .chosen-container-single .chosen-drop .chosen-results {
+  position: relative;
+  overflow-y: auto;
+  max-height: 240px;
+}

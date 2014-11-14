@@ -1,0 +1,26 @@
+== README
+
+This is a basic angular.js/rails application for development purposes. Please review the
+gemfile to determine what has been included for your project. A basic set controllers, 
+routes, models, and, services have been included to verify the integrity of the application.
+We have also included the standard stylesheets, fonts, and images for Arcadia branded applications.
+
+
+Steps to set up:
+
+* From the command line CD into the folder containing the project
+
+* Copy .env.example to .env (cp .env.example .env)
+
+* Follow the instructions in your .env file to generate a secret token
+
+* Run rake db:create
+
+* Run rake db:setup
+
+* Run rake db:seed
+
+* Run rails s
+
+* Open a browser and navigate to http://localhost:3000/tests
+

@@ -1,0 +1,296 @@
+.grid-sample .col {
+  background-color: #f3f3f3;
+  height: 10rem;
+}
+
+.color {
+  font-size: 1.2rem;
+  line-height: 1.3;
+}
+
+.colorblock {
+  height: 7.5rem;
+  text-indent: -9999px;
+}
+
+// PLAIN COLORS
+
+// Teal
+
+$teals: (
+  (darkest-teal, $darkest-teal),
+  (darker-teal, $darker-teal),
+  (dark-teal, $dark-teal),
+  (teal, $teal),
+  (light-teal, $light-teal),
+  (lighter-teal, $lighter-teal),
+  (lightest-teal, $lightest-teal)
+);
+
+@each $teal in $teals {
+  .#{nth($teal, 1)} {
+    background: nth($teal, 2);
+  }
+}
+
+// White
+
+.white-secondary {
+  background: $white-secondary;
+}
+
+.white-tertiary {
+  background: $white-tertiary;
+}
+
+// Gray
+
+$grays: (
+  (darkest-gray, $darkest-gray),
+  (darker-gray, $darker-gray),
+  (dark-gray, $dark-gray),
+  (gray, $gray),
+  (light-gray, $light-gray),
+  (lighter-gray, $lighter-gray),
+  (lightest-gray, $lightest-gray)
+);
+
+@each $gray in $grays {
+  .#{nth($gray, 1)} {
+    background: nth($gray, 2);
+  }
+}
+
+// Yellow
+
+$yellows: (
+  (darkest-yellow, $darkest-yellow),
+  (darker-yellow, $darker-yellow),
+  (dark-yellow, $dark-yellow),
+  (yellow, $yellow),
+  (light-yellow, $light-yellow),
+  (lighter-yellow, $lighter-yellow),
+  (lightest-yellow, $lightest-yellow)
+);
+
+@each $yellow in $yellows {
+  .#{nth($yellow, 1)} {
+    background: nth($yellow, 2);
+  }
+}
+
+// Orange
+
+$oranges: (
+  (darkest-orange, $darkest-orange),
+  (darker-orange, $darker-orange),
+  (dark-orange, $dark-orange),
+  (orange, $orange),
+  (light-orange, $light-orange),
+  (lighter-orange, $lighter-orange),
+  (lightest-orange, $lightest-orange)
+);
+
+@each $orange in $oranges {
+  .#{nth($orange, 1)} {
+    background: nth($orange, 2);
+  }
+}
+
+// Red
+
+$reds: (
+  (darkest-red, $darkest-red),
+  (darker-red, $darker-red),
+  (dark-red, $dark-red),
+  (red, $red),
+  (light-red, $light-red),
+  (lighter-red, $lighter-red),
+  (lightest-red, $lightest-red)
+);
+
+@each $red in $reds {
+  .#{nth($red, 1)} {
+    background: nth($red, 2);
+  }
+}
+
+// Green
+
+$greens: (
+  (darkest-green, $darkest-green),
+  (darker-green, $darker-green),
+  (dark-green, $dark-green),
+  (green, $green),
+  (light-green, $light-green),
+  (lighter-green, $lighter-green),
+  (lightest-green, $lightest-green)
+);
+
+@each $green in $greens {
+  .#{nth($green, 1)} {
+    background: nth($green, 2);
+  }
+}
+
+// Blue
+
+$blues: (
+  (darkest-blue, $darkest-blue),
+  (darker-blue, $darker-blue),
+  (dark-blue, $dark-blue),
+  (blue, $blue),
+  (light-blue, $light-blue),
+  (lighter-blue, $lighter-blue),
+  (lightest-blue, $lightest-blue)
+);
+
+@each $blue in $blues {
+  .#{nth($blue, 1)} {
+    background: nth($blue, 2);
+  }
+}
+
+// Purple
+
+$purples: (
+  (darkest-purple, $darkest-purple),
+  (darker-purple, $darker-purple),
+  (dark-purple, $dark-purple),
+  (purple, $purple),
+  (light-purple, $light-purple),
+  (lighter-purple, $lighter-purple),
+  (lightest-purple, $lightest-purple)
+);
+
+@each $purple in $purples {
+  .#{nth($purple, 1)} {
+    background: nth($purple, 2);
+  }
+}
+
+// Brown
+
+$browns: (
+  (darkest-brown, $darkest-brown),
+  (darker-brown, $darker-brown),
+  (dark-brown, $dark-brown),
+  (brown, $brown),
+  (light-brown, $light-brown),
+  (lighter-brown, $lighter-brown),
+  (lightest-brown, $lightest-brown)
+);
+
+@each $brown in $browns {
+  .#{nth($brown, 1)} {
+    background: nth($brown, 2);
+  }
+}
+
+// Pink
+
+$pinks: (
+  (darkest-pink, $darkest-pink),
+  (darker-pink, $darker-pink),
+  (dark-pink, $dark-pink),
+  (pink, $pink),
+  (light-pink, $light-pink),
+  (lighter-pink, $lighter-pink),
+  (lightest-pink, $lightest-pink)
+);
+
+@each $pink in $pinks {
+  .#{nth($pink, 1)} {
+    background: nth($pink, 2);
+  }
+}
+
+$strokes : (
+  (teal, $teal),
+  (gray, $gray),
+  (yellow, $yellow),
+  (orange, $orange),
+  (red, $red),
+  (green, $green),
+  (blue, $blue),
+  (purple, $purple),
+  (brown, $brown),
+  (pink, $pink)
+);
+
+@each $stroke in $strokes {
+  .stroke-#{nth($stroke, 1)} {
+    stroke: nth($stroke, 2);
+  }
+}
+
+// ITEM COLORS
+
+.header-color {
+  background-color: $header-color;
+}
+
+.header-color-active {
+  background-color: $header-color-active;
+}
+
+.section-header-dark-color {
+  background-color: $section-header-dark-color;
+}
+
+.section-header-color {
+  background-color: $section-header-color;
+}
+
+.footer-color {
+  background-color: $footer-color;
+}
+
+.background-color {
+  background-color: $lightest-teal;
+}
+
+.secondary-color {
+  background-color: $secondary-color;
+}
+
+.tertiary-color {
+  background-color: $tertiary-color;
+}
+
+.active-color {
+  background-color: $active-color;
+}
+
+.alert-color {
+  background-color: $alert-color;
+}
+
+.base-text {
+  background-color: $base-text-color;
+}
+
+.body-copy {
+  background-color: $body-copy-color;
+}
+
+#option1-content {
+  border: $base-border-style;
+  padding: 1rem;
+  position: relative;
+
+  span {
+    position: absolute;
+    top: 0;
+    right: .5rem;
+
+    &[class^="icon-"]:before, &[class*=" icon-"]:before {
+      @include fontsize(14);
+    }
+  }
+}
+
+.terms-divider {
+  color: $dark-teal;
+  margin: 0 .5rem;
+}

@@ -1,0 +1,89 @@
+.attachment:before, .vertical-parent:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -0.25em; /* Adjusts for spacing */
+}
+
+.align-center {
+  text-align: center;
+}
+.align-left {
+  text-align: left;
+}
+.align-right {
+  text-align: right;
+}
+
+.attachment {
+  line-height: 0.5em;
+  margin: 0.2em;
+  padding: 0.5em;
+
+  > a {
+    margin-left: 0.3em;
+    margin-right: 0.3em;
+  }
+
+  .icon-cancel-1:before {
+    padding-top: 0.2em;
+  }
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.filename {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.foreign-key {
+  word-wrap: break-word;
+}
+
+.icon-cancel-1 {
+  cursor: pointer;
+}
+
+.import-list-headers {
+  font-weight: bold;
+}
+
+.initiative-status-filters {
+  padding: 0.5rem 0;
+}
+
+.measures-list, .task-file-uploads {
+  margin-bottom: 0;
+}
+
+.overdue-color {
+  color: $light-red;
+}
+
+.pull-left {
+  float: left !important;
+}
+.pull-right {
+  float: right !important;
+}
+
+.vertical-centered {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: initial;
+
+  input {
+    margin: 0;
+  }
+
+  label.select-label {
+    &:after {
+      line-height: 0;
+      top: 10px;
+    }
+  }
+}

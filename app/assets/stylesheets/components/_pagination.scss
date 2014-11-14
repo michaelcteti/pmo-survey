@@ -1,0 +1,27 @@
+.pagination {
+  counter-reset: count;
+
+  li {
+    display: inline-block;
+
+    a {
+      border: 1px solid transparent;
+      counter-increment: count;
+      padding: .5rem .75rem;
+
+      &:before {
+        content: counter(count);
+      }
+
+      &:target {
+        border: $base-border-style;
+      }
+
+      &.selected {
+        border: $base-border-style;
+        border-radius: .2rem;
+        padding: .5rem .75rem;
+      }
+    }
+  }
+}

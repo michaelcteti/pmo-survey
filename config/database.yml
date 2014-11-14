@@ -1,0 +1,23 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+  min_messages: WARNING
+  pool: 2
+  reaping_frequency: 10
+  timeout: 5000
+
+  <% if (username = ENV['DATABASE_USERNAME']) %>
+  username: <%= username %>
+  <% end %>
+  <% if (password = ENV['DATABASE_PASSWORD']) %>
+  password: <%= password %>
+  <% end %>
+
+development:
+  <<: *default
+  database: <%= ENV['DATABASE'] || 'base_app_development' %>
+
+test:
+  <<: *default
+  database: <%= ENV['DATABASE'] || 'base_app_test' %>

@@ -1,0 +1,22 @@
+//= depend_on_i18n
+
+<%
+  @translations = I18n.backend.instance_eval do
+    unless initialized?
+      init_translations
+    end
+
+    translations
+  end
+%>
+
+app.config(function($translateProvider) {
+  <% @translations.each do |key, value| %>
+    $translateProvider.translations(
+      <%= key.to_json %>,
+      <%= value.to_json.gsub %r{%{(\w+)}}, '{{\1}}' %>
+    );
+  <% end %>
+
+  $translateProvider.preferredLanguage('en');
+});

@@ -1,0 +1,7 @@
+.fadein {
+  @include vendor-prefix('transition', 'opacity 2s ease-in');
+}
+
+.item-to-animate {
+  display: none;
+}

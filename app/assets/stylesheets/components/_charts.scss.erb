@@ -1,0 +1,257 @@
+//= depend_on_asset 'bullet-chart-legend.png'
+
+.edit-link a {
+  fill: $active-color;
+}
+
+.empty-chart-text {
+  text-align: center;
+}
+
+.bar-chart {
+  background: $white-secondary;
+  border: 1px solid $lightest-gray;
+
+  g.bar.current {
+    rect {
+      fill: $light-green;
+    }
+  }
+
+  .bar rect {
+    fill: $light-teal;
+    z-index: 1000;
+  }
+
+  .bar text {
+    fill: white;
+    font-size: 13px;
+
+    &.black {
+      fill: black;
+    }
+  }
+
+  .axis text {
+    font-size: 13px;
+    fill: $dark-gray;
+  }
+
+  .axis path,
+  .axis line {
+    fill: none;
+    stroke: $light-gray;
+    shape-rendering: crispEdges;
+  }
+
+  .tick line {
+    z-index: -1;
+    stroke: $gray;
+  }
+
+  .tick text {
+    fill: $dark-gray;
+  }
+}
+
+.bullet {
+  font-size: 10px;
+
+  .organization-performance {
+    fill: #4aabc5;
+  }
+
+  .target {
+    stroke: #7bc143;
+    stroke-width: 4px;
+  }
+
+  .performance-range {
+    fill: #fbf6e7;
+    stroke: #fde497;
+    stroke-width: 1px;
+  }
+
+  .range.s0 {
+    fill: #fbfbfb;
+    stroke: #e3e6e6;
+    stroke-width: 1px;
+  }
+
+  .tick line {
+    stroke: #666;
+    stroke-width: 0.5px;
+  }
+}
+
+.bullet-chart-legend {
+  padding: 8px 24px;
+
+  .legend-icon {
+    background: url('<%= asset_path("bullet-chart-legend.png") %>') no-repeat;
+    margin-left: 30px;
+    padding-left: 24px;
+  }
+
+  .legend-icon.current-status {
+    background-position: 0 -45px;
+  }
+
+  .legend-icon.network-range {
+    background-position: 0 -22px;
+  }
+
+  .legend-icon.target {
+    background-position: 0 3px;
+  }
+}
+
+#main-initiative-results-chart {
+  position: relative;
+}
+
+.date-picker-chart {
+  .grid-background {
+    fill: $white-secondary;
+    stroke: $lightest-gray;
+    stroke-width: 1px;
+  }
+
+  .grid-highlight {
+    fill: $teal;
+    opacity: 0.1;
+    stroke: black;
+    stroke-width: 1px;
+  }
+
+  .timeline-background {
+    fill: $lightest-gray;
+  }
+
+  .x-axis path,
+  .y-axis path,
+  .x-axis line,
+  .y-axis line {
+    fill: none;
+    shape-rendering: crispEdges;
+  }
+
+  path {
+    fill: $lighter-teal;
+  }
+
+  rect.extent {
+    opacity: 0.25;
+  }
+
+  rect.handle {
+    fill: white;
+    stroke: $light-gray;
+  }
+}
+
+.line-chart {
+  .action-plan {
+    circle {
+      fill: $light-teal;
+      stroke: $teal;
+      stroke-width: 1px;
+    }
+
+    line {
+      stroke: $teal;
+      stroke-dasharray: 4, 4;
+      stroke-width: 1px;
+    }
+
+    text {
+      cursor: default;
+      stroke: white;
+      text-anchor: middle;
+    }
+
+    &.highlight {
+      circle {
+        stroke-width: 3px;
+      }
+
+      line {
+        stroke-width: 2px;
+      }
+    }
+  }
+
+  line.initiative-date {
+    stroke-opacity: 0.7;
+    stroke-width: 3px;
+  }
+
+  line.initiative-end-date {
+    stroke: $red;
+  }
+
+  line.initiative-start-date {
+    stroke: $teal;
+  }
+
+  line.measure-target-line {
+    opacity: 0.5;
+    stroke: $green;
+    stroke-width: 3px;
+  }
+
+  .x-axis path,
+  .y-axis path,
+  .x-axis line,
+  .y-axis line {
+    fill: none;
+    shape-rendering: crispEdges;
+    stroke: $lightest-gray;
+    stroke-width: 1px;
+  }
+
+  .data-point {
+    fill: white;
+    stroke: $gray;
+    stroke-width: 1px;
+
+    &:hover {
+      stroke: $teal;
+      stroke-width: 3px;
+    }
+  }
+
+  .grid-background {
+    fill: $white-secondary;
+    stroke: $lightest-gray;
+    stroke-width: 1px;
+  }
+
+  path {
+    fill: none;
+    stroke-width: 2.5px;
+  }
+
+  .tick {
+    line {
+      stroke: $lightest-gray;
+    }
+    text {
+      font-size: 12px;
+    }
+  }
+}
+
+.blueprint-history-chart {
+  position: relative;
+}
+
+#participant-initiative-results-chart {
+  position: relative;
+
+  .measure-target-line {
+    opacity: 0.7;
+    stroke: $green;
+    stroke-width: 3px;
+  }
+}

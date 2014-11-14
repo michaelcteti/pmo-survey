@@ -1,0 +1,160 @@
+#icon-attach:before {
+  @include fontsize(15);
+}
+
+.icon-yellow {
+  &[class^="icon-"]:before, &[class*=" icon-"]:before {
+    color: $yellow;
+  }
+}
+
+.icon-white {
+  &[class^="icon-"]:before, &[class*=" icon-"]:before {
+    color: white;
+  }
+}
+
+.circled {
+  background: white;
+  border: $base-border-style;
+  border-radius: 30px;
+  display: inline-block;
+  @include title-font;
+  margin: .5rem;
+  text-align: center;
+  position: relative;
+}
+
+// Line height may need to be customized to center align icon, depending on each icon's size
+
+.circled-small {
+  @extend .circled;
+  height: 2rem;
+  line-height: 1.4;
+  width: 2rem;
+  vertical-align: middle;
+
+  &[class^="icon-"]:before, &[class*=" icon-"]:before {
+    color: $light-teal;
+    font-size: 1.4rem;
+  }
+}
+
+.circled-medium {
+  @extend .circled;
+  height: 3rem;
+  line-height: 1.5;
+  width: 3rem;
+
+  &[class^="icon-"]:before, &[class*=" icon-"]:before {
+    color: $light-teal;
+  }
+}
+
+.circled-large {
+  @extend .circled;
+  height: 4rem;
+  @include fontsize(20);
+  line-height: 2;
+  width: 4rem;
+}
+
+.circled-extra-large {
+  @extend .circled;
+  height: 6rem;
+  @include fontsize(18);
+  letter-spacing: 0;
+  line-height: 1;
+  padding-top: .6rem;
+  width: 6rem;
+}
+
+.positive-circle {
+  background: $green;
+  border: none;
+  color: white;
+  @include vendor-prefix('transition', 'all 0.2s ease');
+  position: relative;
+
+  &[class^="icon-"]:before, &[class*=" icon-"]:before {
+    color: white;
+  }
+
+  > span {
+    opacity: 0;
+    @include vendor-prefix('transition', 'opacity .2s ease');
+  }
+
+  &:hover, &:target {
+    background: $dark-green;
+
+    > span {
+      opacity: 1;
+    }
+  }
+}
+
+.negative-circle {
+  background: $alert-color;
+  border: none;
+  color: white;
+  @include vendor-prefix('transition', 'all 0.2s ease');
+  position: relative;
+
+  &[class^="icon-"]:before, &[class*=" icon-"]:before {
+    color: white;
+  }
+
+  > span {
+    opacity: 0;
+    @include vendor-prefix('transition', 'opacity .2s ease');
+  }
+
+  &:hover, &:target {
+    background: darken($alert-color, 10%);
+
+    > span {
+      opacity: 1;
+    }
+  }
+}
+
+.teal-circle {
+  background: $light-teal;
+  border: none;
+  color: white;
+
+  &[class^="icon-"]:before, &[class*=" icon-"]:before {
+    color: white;
+  }
+}
+
+.wizard-circle {
+  background: $dark-teal;
+  border: $secondary-border-style;
+  color: white;
+  counter-increment: count;
+  @include fontsize(18);
+  line-height: 1.6;
+  padding-left: .1rem;
+  @include vendor-prefix('transition', 'all 0.2s ease');
+  width: 2.9rem;
+
+  &:before {
+    content: counter(count);
+  }
+
+  &:hover {
+    background: $darker-teal;
+    cursor: pointer;
+  }
+
+  &.active {
+    background: white;
+    color: $green;
+  }
+}
+
+.text-input+.icon-cancel-1 {
+  margin: .7rem;
+}

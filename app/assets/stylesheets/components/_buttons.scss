@@ -1,0 +1,107 @@
+button, a.button {
+  @include button;
+}
+
+.button + .button, .button + button, button + .button, button + button {
+  margin-left: 0.5rem;
+}
+
+.button-primary {
+  background: white;
+  border: $base-border-style;
+  color: $active-color;
+
+  &:hover, &.active {
+    background: $white-tertiary;
+  }
+}
+
+.button-secondary {
+  background: $light-teal;
+  border: .1rem solid $light-teal;
+  color: white;
+
+  &:hover, &:focus, &.active {
+    background: $teal;
+
+    span {
+      background-color: $darker-teal;
+    }
+  }
+
+  span {
+    background-color: $teal;
+    border: $secondary-border-style;
+  }
+}
+
+.button-tertiary {
+  background: transparent;
+  border: 1px solid rgba(227, 230, 231, .3);
+  color: white;
+  padding: 1rem;
+
+  &:hover, &.active {
+    background: $darkest-teal;
+  }
+}
+
+.button-chart {
+  background: white;
+  border: $base-border-style;
+  color: $base-text-color;
+  font-weight: bold;
+  @include base-font;
+  @include fontsize(12);
+  padding: 0.3rem 0.5rem;
+
+  &:hover, &.active {
+    background: $white-tertiary;
+  }
+}
+
+.icon-only-button {
+  background: $dark-teal;
+  border: $secondary-border-style;
+  border-radius: .2rem;
+  line-height: 1.7;
+  margin: 0 1rem;
+  padding: 0 1rem;
+  width: auto;
+
+  &:hover, &.active {
+    background: $darker-teal;
+  }
+
+  span:before {
+    color: white;
+  }
+}
+
+.button-with-icon {
+  padding: 0 1rem 0 .5rem;
+}
+
+.upload-file {
+  z-index: 1;
+}
+
+.full-button {
+  padding: 1rem;
+}
+
+.tag {
+  @extend .button-primary;
+  border-radius: 2rem;
+  margin: 0 0.4rem;
+  padding: .5rem 1rem;
+  @include vendor-prefix('transition', 'background 0.2s ease-in-out');
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  .text {
+    color: $base-text-color;
+  }
+}

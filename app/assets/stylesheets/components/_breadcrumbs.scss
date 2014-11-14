@@ -1,0 +1,27 @@
+.breadcrumbs {
+  margin-bottom: 1rem;
+
+  li {
+    display: inline-block;
+
+    &:first-child {
+      @include title-font;
+    }
+
+    &:last-child {
+      font-weight: 300;
+
+      &:after {
+        content: '';
+        float: right;
+      }
+    }
+
+    &:after {
+      color: $teal;
+      content: '\e804';
+      font-family: 'fontello';
+      margin: 0 1rem;
+    }
+  }
+}
