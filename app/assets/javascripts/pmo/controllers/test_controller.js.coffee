@@ -1,4 +1,4 @@
-app.controller 'TestController', ($scope, Test) ->
+pmo.controller 'TestCtrl', ($scope, Test) ->
 
   $scope.testVariable = "Hello World!"
   Test.get().then (test) ->

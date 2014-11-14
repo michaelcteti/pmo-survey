@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
-  root to: 'angular#index'
+  root to: 'pmo#show'
 
-  post 'test', to: 'tests#index'
+  namespace :api do
+    resources :projects, only: [:index, :create]
+  end
 
-  get '*path' => 'angular#index'
+  # post 'test', to: 'tests#index'
+  # get '*path' => 'pmo#show'
+  get 'projects' => 'pmo#show'
 end
